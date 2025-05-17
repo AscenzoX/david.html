@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffebf0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.heart {
+  font-size: 100px;
+  cursor: pointer;
+  animation: heartbeat 1.2s infinite;
+  transition: transform 0.2s;
+}
+
+.heart:hover {
+  transform: scale(1.2);
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 100, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 90%;
+  max-width: 400px;
+}
+
+.card.hidden {
+  display: none;
+}
+
+.message {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.yes, .no {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.yes {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.no {
+  background-color: #eee;
+}
+
+.no:hover {
+  background-color: #ccc;
+}
+
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
