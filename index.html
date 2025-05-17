@@ -2,24 +2,25 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Para Karen 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corazón para Karen</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="heart" onclick="showMessage()">❤️</div>
 
-    <div class="card hidden" id="loveCard">
-      <p class="message">¿Quieres ir a tomar un fresco conmigo, Karen? 🥤💕</p>
-      <div class="options">
-        <button class="yes" onclick="celebrate()">Sí 🥰</button>
-        <button class="no" onmouseover="moveNoButton(this)">No 🙈</button>
+  <div class="container">
+    <button id="heart" aria-label="Corazón para Karen">❤️</button>
+
+    <div id="message-card" class="hidden">
+      <p class="message-text">¿Quieres ir a tomar un fresco conmigo, Karen?</p>
+      <div class="buttons">
+        <button id="yes-btn" class="btn">Sí</button>
+        <button id="no-btn" class="btn btn-no">No</button>
       </div>
     </div>
-
-    <div class="confetti" id="confetti"></div>
   </div>
+
+  <canvas id="confetti-canvas"></canvas>
 
   <script src="script.js"></script>
 </body>
